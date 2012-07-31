@@ -1,72 +1,36 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+---
+layout: default
+title: YADT an augmented deployment tool
+---
+<dl>
+	<dt>YADT</dt>
+	<dd>is a next generation data center deployment and system management tool.</dd>
+</dl>
 
-		<title>YADT an augmented deployment tool</title>
-		<meta name="description" content="YADT is a next generation data center deployment and system management tool.">
-		<meta name="viewport" content="width=device-width">
-		<link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="css/main.css">
-		<script src="js/vendor/modernizr-2.6.1.min.js"></script>
-	</head>
-	<body>
-		<header>
-			<h1>YADT an augmented deployment tool</h1>
-			<nav>
-				<a href="getting-started.html">getting started</a>
-				<a href="about.html">about</a>
-				<a href="blog.html">blog</a>
-				<a href="documentation.html">documentation</a>
-				<a href="downloads.html">download</a>
-				<a href="https://github.com/yadt">sources</a>
-				<a href="news.html">news</a>
-			</nav>
-		</header>
-		<div id="main">
-			<dl>
-				<dt>YADT</dt>
-				<dd>is a next generation data center deployment and system management tool.</dd>
-			</dl>
+It is based on two central components:
+<ul>
+	<li>central management of dependencies between services, systems and software packages</li>
+	<li>using package based deployment (RPM, DEB ...) for both software and configuration management</li>
+</ul>
 
-			It is based on two central components:
-			<ul>
-				<li>central management of dependencies between services, systems and software packages</li>
-				<li>using package based deployment (RPM, DEB ...) for both software and configuration management</li>
-			</ul>
+<p>
+	YADT lets you model your data center landscape in a simple, human readable yaml format. The packaging 
+	of software and its configuration, the definition of package dependencies, the definition of service
+	dependencies, and some basic conventions are the YADT model. With these information, YADT can deploy
+	any changes to your software and your configuration to any number of hosts. Of course YADT will also
+	deploy all updates to your OS, you can even seperate these OS updates from your application and
+	configuration updates.
+</p>
 
-			<p>
-				YADT lets you model your data center landscape in a simple, human readable yaml format. The packaging 
-				of software and its configuration, the definition of package dependencies, the definition of service
-				dependencies, and some basic conventions are the YADT model. With these information, YADT can deploy
-				any changes to your software and your configuration to any number of hosts. Of course YADT will also
-				deploy all updates to your OS, you can even seperate these OS updates from your application and
-				configuration updates.
-			</p>
+<p>
+	And YADT assures that the updates and service restarts are done in the correct order over your
+	complete data center. YADT does this by analyzing the service and package dependencies, grouping
+	dependent services and hosts together into "chuncks". It then rolles the update as a sequential wave
+	over all chuncks, thus assuring that your platform as a whole stays online during this process.
+</p>
 
-			<p>
-				And YADT assures that the updates and service restarts are done in the correct order over your
-				complete data center. YADT does this by analyzing the service and package dependencies, grouping
-				dependent services and hosts together into "chuncks". It then rolles the update as a sequential wave
-				over all chuncks, thus assuring that your platform as a whole stays online during this process.
-			</p>
+<p>
+	YADT also provides a way to collaboratively administer a huge number of hosts concurrently by many
+	users. It provides an audit trail of who did what when on which host.			
+</p>
 
-			<p>
-				YADT also provides a way to collaboratively administer a huge number of hosts concurrently by many
-				users. It provides an audit trail of who did what when on which host.			
-			</p>
-		</div>
-
-		<footer>
-			YADT an Augmented Deployment Tool<br>
-			Copyright (C) 2010-2012 Immobilien Scout GmbH<br>
-			Licensed under GNU GPL v3
-		</footer>
-
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script>
-			window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')
-		</script>
-	</body>
-</html>
