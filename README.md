@@ -1,4 +1,4 @@
 YADT website
 ============
 
-[http://yadt.github.com/](yadt.github.com)
+[yadt.github.com](http://yadt.github.com)
