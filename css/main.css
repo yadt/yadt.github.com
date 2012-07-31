@@ -671,3 +671,7 @@ nav a {
 	color: #c0c0e0;
 }
 
+.float-right {
+	float: right;
+}
+
