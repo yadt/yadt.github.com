@@ -105,11 +105,11 @@ body {
 
 a {
     color: #00e;
-	text-decoration: none;
+    text-decoration: none;
 }
 
 a:visited {
-    color: #551a8b;
+    color: #00e;
 }
 
 a:hover {
