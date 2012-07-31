@@ -21,12 +21,49 @@
 				<a href="documentation.html">documentation</a>
 				<a href="downloads.html">download</a>
 				<a href="https://github.com/yadt">sources</a>
+				<a href="news.html">news</a>
 			</nav>
 		</header>
 		<div id="main">
+			<dl>
+				<dt>YADT</dt>
+				<dd>is a next generation data center deployment and system management tool.</dd>
+			</dl>
+
+			It is based on two central components:
+			<ul>
+				<li>central management of dependencies between services, systems and software packages</li>
+				<li>using package based deployment (RPM, DEB ...) for both software and configuration management</li>
+			</ul>
+
+			<p>
+				YADT lets you model your data center landscape in a simple, human readable yaml format. The packaging 
+				of software and its configuration, the definition of package dependencies, the definition of service
+				dependencies, and some basic conventions are the YADT model. With these information, YADT can deploy
+				any changes to your software and your configuration to any number of hosts. Of course YADT will also
+				deploy all updates to your OS, you can even seperate these OS updates from your application and
+				configuration updates.
+			</p>
+
+			<p>
+				And YADT assures that the updates and service restarts are done in the correct order over your
+				complete data center. YADT does this by analyzing the service and package dependencies, grouping
+				dependent services and hosts together into "chuncks". It then rolles the update as a sequential wave
+				over all chuncks, thus assuring that your platform as a whole stays online during this process.
+			</p>
+
+			<p>
+				YADT also provides a way to collaboratively administer a huge number of hosts concurrently by many
+				users. It provides an audit trail of who did what when on which host.			
+			</p>
 		</div>
+
 		<footer>
+			YADT an Augmented Deployment Tool<br>
+			Copyright (C) 2010-2012 Immobilien Scout GmbH<br>
+			Licensed under GNU GPL v3
 		</footer>
+
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script>
 			window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')

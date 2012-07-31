@@ -4,6 +4,14 @@ body {
 	text-align: center;
 }
 
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 header {
 	text-align: left;
 	width: 1100px;
@@ -21,6 +29,7 @@ h1 {
 
 nav {
 	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
@@ -29,5 +38,16 @@ nav a {
 	padding-right: 20px;
 }
 
+footer {
+	border-top: 1px solid #e0e0e0;
+	padding-top: 20px;
+	color: #c0c0e0;
+	width: 1100px;
+	margin: auto;
+}
+
 #main {
+	width: 1100px;
+	text-align: left;
+	margin: auto;
 }
