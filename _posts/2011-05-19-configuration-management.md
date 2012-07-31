@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Configuration Managament with Subversion and RPM - The Linux Way of Doing Things
+title: Configuration Managament with Subversion and RPM
 ---
 
 Take a look at the talk Configuration Management with Subversion and RPM I held at the Subversion Day Berlin 2011.
