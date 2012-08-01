@@ -28,7 +28,7 @@ section,
 summary,
 #main {
     display: block;
-    width: 1100px;
+    width: 1080px;
     margin: auto;
 }
 
@@ -89,11 +89,13 @@ body {
  */
 
 ::-moz-selection {
+    color: #000;
     background: #b3d4fc;
     text-shadow: none;
 }
 
 ::selection {
+    color: #000;
     background: #b3d4fc;
     text-shadow: none;
 }
@@ -636,54 +638,54 @@ td {
 }
 
 header a.banner {
-	color: #306090;
+    color: #306090;
 }
 
 header a.banner:hover {
-	color: #5080b0;
+    color: #5080b0;
 }
 
 .banner {
-	display: block;
-	padding-left: 70px;
-	background-image: url('../images/transparent-logo-64.png');
-	background-repeat: no-repeat;
-	font-size: 40px;
-	font-weight: bold;
-	height: 64px;
-	line-height: 64px;
-	margin-top: 15px;
-	margin-bottom: 15px;
+    display: block;
+    padding-left: 70px;
+    background-image: url('../images/transparent-logo-64.png');
+    background-repeat: no-repeat;
+    font-size: 40px;
+    font-weight: bold;
+    height: 64px;
+    line-height: 64px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 footer {
-	border-top: 1px solid #e0e0e0;
-	padding-top: 20px;
-	color: #c0c0e0;
-	text-align: center;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+    color: #c0c0e0;
+    text-align: center;
 }
 
 nav {
-	border-top: 1px solid #e0e0e0;
-	border-bottom: 1px solid #e0e0e0;
-	padding-top: 10px;
-	padding-bottom: 10px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 nav a {
-	padding-right: 20px;
+    padding-right: 20px;
 }
 
 
 .posts li {
-	list-style-type: none;
+    list-style-type: none;
 }
 
 .post-date {
-	color: #c0c0e0;
+    color: #c0c0e0;
 }
 
 .float-right {
-	float: right;
+    float: right;
 }
 
