@@ -648,7 +648,8 @@ header a.banner:hover {
 	padding-left: 70px;
 	background-image: url('../images/transparent-logo-64.png');
 	background-repeat: no-repeat;
-	font-size: 38px;
+	font-size: 40px;
+	font-weight: bold;
 	height: 64px;
 	line-height: 64px;
 	margin-top: 10px;
