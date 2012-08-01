@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Configuration Managament with Subversion and RPM
 ---
 

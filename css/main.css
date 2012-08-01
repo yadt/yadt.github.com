@@ -635,13 +635,24 @@ td {
     }
 }
 
-h1 {
+header a.banner {
+	color: #306090;
+}
+
+header a.banner:hover {
+	color: #5080b0;
+}
+
+.banner {
+	display: block;
 	padding-left: 70px;
 	background-image: url('../images/transparent-logo-64.png');
 	background-repeat: no-repeat;
-	font-size: 48px;
+	font-size: 38px;
 	height: 64px;
 	line-height: 64px;
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 
 footer {
@@ -654,8 +665,8 @@ footer {
 nav {
 	border-top: 1px solid #e0e0e0;
 	border-bottom: 1px solid #e0e0e0;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 nav a {
