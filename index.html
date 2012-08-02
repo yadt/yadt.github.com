@@ -3,63 +3,63 @@ layout: default
 title: Welcome to YADT an Augmented Deployment Tool
 ---
 <dl>
-	<dt>YADT</dt>
-	<dd>an Augmented Deployment Tool is a next generation data center deployment and system management tool.</dd>
+    <dt>YADT</dt>
+    <dd>an Augmented Deployment Tool is a next generation data center deployment and system management tool.</dd>
 </dl>
 
 It is based on two central components:
 <ul>
-	<li>central management of dependencies between services, systems and software packages</li>
-	<li>using package based deployment (RPM, DEB ...) for both software and configuration management</li>
+    <li>central management of dependencies between services, systems and software packages</li>
+    <li>using package based deployment (RPM, DEB ...) for both software and configuration management</li>
 </ul>
 
 <p>
-	YADT lets you model your data center landscape in a simple, human readable yaml format. The packaging 
-	of software and its configuration, the definition of package dependencies, the definition of service
-	dependencies, and some basic conventions are the YADT model. With these information, YADT can deploy
-	any changes to your software and your configuration to any number of hosts. Of course YADT will also
-	deploy all updates to your OS, you can even seperate these OS updates from your application and
-	configuration updates.
+    YADT lets you model your data center landscape in a simple, human readable yaml format. The packaging 
+    of software and its configuration, the definition of package dependencies, the definition of service
+    dependencies, and some basic conventions are the YADT model. With these information, YADT can deploy
+    any changes to your software and your configuration to any number of hosts. Of course YADT will also
+    deploy all updates to your OS, you can even seperate these OS updates from your application and
+    configuration updates.
 </p>
 
 <p>
-	And YADT assures that the updates and service restarts are done in the correct order over your
-	complete data center. YADT does this by analyzing the service and package dependencies, grouping
-	dependent services and hosts together into "chuncks". It then rolles the update as a sequential wave
-	over all chuncks, thus assuring that your platform as a whole stays online during this process.
+    And YADT assures that the updates and service restarts are done in the correct order over your
+    complete data center. YADT does this by analyzing the service and package dependencies, grouping
+    dependent services and hosts together into "chuncks". It then rolles the update as a sequential wave
+    over all chuncks, thus assuring that your platform as a whole stays online during this process.
 </p>
 
 <p>
-	YADT also provides a way to collaboratively administer a huge number of hosts concurrently by many
-	users. It provides an audit trail of who did what when on which host.			
+    YADT also provides a way to collaboratively administer a huge number of hosts concurrently by many
+    users. It provides an audit trail of who did what when on which host.            
 </p>
 
 
 <div style="display: table-row;">
-	<div style="width: 300px; display: table-cell; border: 5px solid #f0f0ff; border-radius: 10px; padding: 20px;">
-		<div style="font-size: 110%; font-weight: bold; padding-bottom: 15px;"><a href="/blog/">Recent Blog Posts</a></div>
-		<span style="font-size: 90%;">
-		{% for post in site.categories.blog limit:3 %}
-			<a href="{{ post.url }}">{{ post.date | date_to_string }} - {{ post.title }}</a>
-		{% endfor %}
-		</span>
-	</div>
-	<div style="width: 15px; display: table-cell"></div>
-	<div style="width: 300px; display: table-cell; border: 5px solid #f0f0ff; border-radius: 10px; padding: 20px;">
-		<div style="font-size: 110%; font-weight: bold; padding-bottom: 15px;"><a href="/events/">Upcoming Events</a></div>
-		<span style="font-size: 90%;">
-		{% for post in site.categories.events limit:3 %}
-			<div><a href="{{ post.url }}">{{ post.title }}</a></div>
-			<div class="post-date">{{ post.date | date_to_string }}</div>
-		{% endfor %}
-		</span>
-	</div>
-	<div style="width: 15px; display: table-cell"></div>
-	<div style="width: 300px; display: table-cell; border: 5px solid #f0f0ff; border-radius: 10px; padding: 20px;">
-		<div style="font-size: 110%; font-weight: bold; padding-bottom: 15px;">Resources</div>
-		<a href="http://www.youtube.com/user/yadtproject/featured">
-			youtube
-		</a>
-	</div>
+    <div style="width: 300px; display: table-cell; border: 5px solid #f0f0ff; border-radius: 10px; padding: 20px;">
+        <div style="font-size: 110%; font-weight: bold; padding-bottom: 15px;"><a href="/blog/">Recent Blog Posts</a></div>
+        <span style="font-size: 90%;">
+        {% for post in site.categories.blog limit:3 %}
+            <a href="{{ post.url }}">{{ post.date | date_to_string }} - {{ post.title }}</a>
+        {% endfor %}
+        </span>
+    </div>
+    <div style="width: 15px; display: table-cell"></div>
+    <div style="width: 300px; display: table-cell; border: 5px solid #f0f0ff; border-radius: 10px; padding: 20px;">
+        <div style="font-size: 110%; font-weight: bold; padding-bottom: 15px;"><a href="/events/">Upcoming Events</a></div>
+        <span style="font-size: 90%;">
+        {% for post in site.categories.events limit:3 %}
+            <div><a href="{{ post.url }}">{{ post.title }}</a></div>
+            <div class="post-date">{{ post.date | date_to_string }}</div>
+        {% endfor %}
+        </span>
+    </div>
+    <div style="width: 15px; display: table-cell"></div>
+    <div style="width: 300px; display: table-cell; border: 5px solid #f0f0ff; border-radius: 10px; padding: 20px;">
+        <div style="font-size: 110%; font-weight: bold; padding-bottom: 15px;">Resources</div>
+        <a href="http://www.youtube.com/user/yadtproject/featured">
+            youtube
+        </a>
+    </div>
 </div>
 
