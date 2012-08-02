@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Blog Posts
+title: Events
 ---
 <ul class="posts">
-	{% for post in site.posts limit:3 %}
+	{% for post in site.categories.events %}
 	<li>
 		<span class="post-date">{{ post.date | date_to_string }}</span>
 		&raquo;

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Configuration Managament with Subversion and RPM
+categories: events
 ---
 
 Take a look at the talk 
