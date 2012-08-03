@@ -704,7 +704,7 @@ nav a {
 }
 
 .information-spacer {
-    display: table-cell
+    display: table-cell;
     width: 15px;
 }
 
