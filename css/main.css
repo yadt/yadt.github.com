@@ -691,3 +691,26 @@ nav a {
     float: right;
 }
 
+.information-row {
+    display: table-row;
+}
+
+.information-cell {
+    display: table-cell;
+    border: 5px solid #f0f0ff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+}
+
+.information-spacer {
+    display: table-cell
+    width: 15px;
+}
+
+.information-title {
+    display: block;
+    font-size: 110%;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
