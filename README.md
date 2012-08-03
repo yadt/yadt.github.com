@@ -9,6 +9,8 @@
 sudo gem install jekyll
 ```
 
+[How to install jekyll](https://github.com/mojombo/jekyll/wiki/install)
+
 **Start local server**
 ```bash
 jekyll --server
