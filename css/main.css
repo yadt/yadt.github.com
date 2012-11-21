@@ -754,3 +754,7 @@ a.getting-started {
 	position: relative;
 	left: 800px;
 }
+
+a.getting-started:hover {
+	text-decoration: none;
+}
