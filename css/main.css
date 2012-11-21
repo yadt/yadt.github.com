@@ -756,5 +756,6 @@ a.getting-started {
 }
 
 a.getting-started:hover {
+	color: white;
 	text-decoration: none;
 }
