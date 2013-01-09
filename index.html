@@ -46,7 +46,8 @@ It is based on two central components:
     <div class="information-cell">
         <a class="information-title" href="/blog/">Recent Blog Posts</a>
         {% for post in site.categories.blog limit:3 %}
-            <a href="{{ post.url }}">{{ post.date | date_to_string }} - {{ post.title }}</a> <br>
+            <div><a href="{{ post.url }}">{{ post.title }}</a></div>
+            <div class="post-date">{{ post.date | date_to_string }}</div>
         {% endfor %}
     </div>
     <div class="information-spacer"></div>
