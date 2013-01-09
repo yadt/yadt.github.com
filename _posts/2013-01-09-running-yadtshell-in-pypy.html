@@ -1,0 +1,69 @@
+---
+layout: default
+title: Running yadtshell in PyPy
+categories: blog
+---
+
+For demonstration we are creating a directory which will contain the PyPy
+installation and everything else we need to run yadtshell.
+
+<pre>
+  <code>
+     mkdir pypy-yadtshell
+     cd pypy-yadtshell
+  </code>
+</pre>
+
+<h2>Installation of PyPy</h2>
+On the PyPy homepage there is detailed guide how to 
+<a href="http://pypy.org/download.html#installing">install PyPy</a>. <br>
+
+<br>
+Download and unzip the newest version of PyPy:
+<pre>
+  <code>
+     wget https://bitbucket.org/pypy/pypy/downloads/pypy-2.0-beta1-linux64-libc2.15.tar.bz2
+     tar xvf pypy-2.0-beta1-linux64-libc2.15.tar
+     rm pypy-2.0-beta1-linux64-libc2.15.tar
+  </code>
+</pre>
+
+Download the installation scripts for distribute and pip:
+<pre>
+  <code>
+     curl -O http://python-distribute.org/distribute_setup.py
+     curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+  </code>
+</pre>
+
+Install distribute and pip:
+<pre>
+  <code>
+     ./pypy-2.0-beta1/bin/pypy distribute_setup.py
+     ./pypy-2.0-beta1/bin/pypy get-pip.py
+  </code>
+</pre>
+
+<h2>Install yadtshell</h2>
+
+Install yadtshell from pypi using pip:
+<pre>
+  <code>
+     ./pypy-2.0-beta1/bin/pip install yadtshell
+  </code>
+</pre>
+
+After installation you can run yadtshell:
+
+<pre>
+  <code>
+user@host:~/pypy-yadtshell$ ./pypy-2.0-beta1/bin/yadtshell
+Usage: yadtshell [options] {status|info|dump|start|stop|ignore|unignore|lock|unlock} [uri ...]
+
+Options:
+  -h, --help    show this help message and exit
+  -n, --dryrun  does nothing
+  -v            verbose output
+  </code>
+</pre>
+
