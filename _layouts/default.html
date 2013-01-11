@@ -17,12 +17,14 @@
 				<li><a href="https://github.com/yadt/yadt.github.com/wiki" target="_blank">Wiki</a></li>
 				<li><a href="https://github.com/yadt" target="_blank">Source</a><li>
 			</ul>
-			<h2 class="muted"><img class="top-icon" src="/images/yadt-logo-32.jpg" alt="yadt"><a href="/">yadt</a></h2>
+			<h2 class="muted"><img class="top-icon" src="/images/yadt-logo-32.jpg" alt="yadt"><a href="/">YADT - an Augmented Deployment Tool</a></h2>
 		</div>
 
 		<hr>
 
+		{% if page.title != 'YADT - an Augmented Deployment Tool' %}
 		<h1 class="marketing">{{ page.title }}</h1>
+		{% endif %}
 
 		{% if page.date %}
 		<span class="pull-right">
