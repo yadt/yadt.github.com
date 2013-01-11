@@ -1,0 +1,38 @@
+---
+layout: default
+title: Faster Due to Using C Implementations for Parsing
+categories: blog
+---
+
+<h2>Just a short note</h2>
+
+the default pure-python implementations of pyyaml and pickle are not the
+fastest when it comes to handling more than a few hosts.
+So we are using the C implementations now (where available), increasing
+the overall performance by factor 2.5 (measured, feels like 5).
+
+<h2>Reference</h2>
+<ul>
+  <li>the <a href="http://pyyaml.org/">pyyaml homepage</a> and the
+    <a href="http://pyyaml.org/wiki/LibYAML">C implementation</a>.</li>
+  <li>the <a href="http://docs.python.org/2/library/pickle.html#module-pickle">pickle doc</a>
+  and its <a href="http://docs.python.org/2/library/pickle.html#module-cPickle">C implementation</a>.
+</ul>
+
+<h2>Example code</h2>
+<pre>
+  <code>
+try:
+    from yaml import CLoader as Loader
+    logger.debug("using C implementation of yaml")
+except ImportError:
+    from yaml import Loader
+    logger.debug("using default yaml")
+try:
+    import cPickle as pickle
+    logger.debug("using C implementation of pickle")
+except ImportError:
+    import pickle
+    logger.debug("using default pickle")
+  </code>
+</pre>
