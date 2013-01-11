@@ -3,37 +3,40 @@ layout: default
 title: YADT - an Augmented Deployment Tool
 ---
 <div class="jumbotron">
-        <h2>One Tool to Rule Them All</h2>
-        <p class="lead">yadt is a next generation data center deployment and system management tool.
-It is based on two central components: central management of dependencies between services, systems and software packages, and using package based deployment (RPM, DEB ...) for both software and configuration management.
+	<h2>One Tool to Rule Them All</h2>
+	<p class="lead">
+		yadt is a next generation data center deployment and system management tool.
+		It is based on two central components: central management of dependencies between services,
+		systems and software packages, and using package based deployment (RPM, DEB ...) for both
+		software and configuration management.
 	</p>
-        <a class="btn btn-large btn-success" href="https://github.com/yadt/getting-started">Try it yourself.</a>
-      </div>
+	<a class="btn btn-large btn-success" href="https://github.com/yadt/getting-started">Try it yourself.</a>
+</div>
 
 <hr>
 
 <div class="row-fluid marketing">
 	<div class="span6">
 		<p>
-		    YADT lets you model your data center landscape in a simple, human readable yaml format. The packaging 
-		    of software and its configuration, the definition of package dependencies, the definition of service
-		    dependencies, and some basic conventions are the YADT model. With these information, YADT can deploy
-		    any changes to your software and your configuration to any number of hosts. Of course YADT will also
-		    deploy all updates to your OS, you can even seperate these OS updates from your application and
-		    configuration updates.
+			YADT lets you model your data center landscape in a simple, human readable yaml format. The packaging 
+			of software and its configuration, the definition of package dependencies, the definition of service
+			dependencies, and some basic conventions are the YADT model. With these information, YADT can deploy
+			any changes to your software and your configuration to any number of hosts. Of course YADT will also
+			deploy all updates to your OS, you can even seperate these OS updates from your application and
+			configuration updates.
 		</p>
 	</div>
 
 	<div class="span6">
 		<p>
-		    And YADT assures that the updates and service restarts are done in the correct order over your
-		    complete data center. YADT does this by analyzing the service and package dependencies, grouping
-		    dependent services and hosts together into "chuncks". It then rolles the update as a sequential wave
-		    over all chuncks, thus assuring that your platform as a whole stays online during this process.
+			And YADT assures that the updates and service restarts are done in the correct order over your
+			complete data center. YADT does this by analyzing the service and package dependencies, grouping
+			dependent services and hosts together into "chuncks". It then rolles the update as a sequential wave
+			over all chuncks, thus assuring that your platform as a whole stays online during this process.
 		</p>
 		<p>
-		    YADT also provides a way to collaboratively administer a huge number of hosts concurrently by many
-		    users. It provides an audit trail of who did what when on which host.            
+			YADT also provides a way to collaboratively administer a huge number of hosts concurrently by many
+			users. It provides an audit trail of who did what when on which host.            
 		</p>
 	</div>
 </div>
@@ -43,27 +46,29 @@ It is based on two central components: central management of dependencies betwee
 <div class="row-fluid marketing">
         <div class="span4">
 	<h3>Blog</h3>
-	{% for post in site.categories.blog limit:3 %}
-          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-          <p>{{ post.date | date_to_string }}</p>
-	{% endfor %}
+		{% for post in site.categories.blog limit:3 %}
+		<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+		<p>{{ post.date | date_to_string }}</p>
+		{% endfor %}
         </div>
 
         <div class="span4">
 	<h3>Events</h3>
-	{% for post in site.categories.events limit:3 %}
-          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-          <p>{{ post.date | date_to_string }}</p>
-	{% endfor %}
+		{% for post in site.categories.events limit:3 %}
+		<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+		<p>{{ post.date | date_to_string }}</p>
+		{% endfor %}
         </div>
       
 	<div class="span4">
-	  <h3>Jobs</h3>
-	  <p>Do you like Open Source? Do you want to help building the next generation data center automation? <a href="http://www.immobilienscout24.de" target="_blank">ImmobilienScout24</a> is looking for engineers who like to automate everything.
-	Check our <a href="http://developer.immobilienscout24.de/engineering/jobs-kein-kalter-kaffee/" target="_blank">developer blog</a> for further information.
-	</p>
-
+		<h3>Jobs</h3>
+		<p>
+			Do you like Open Source? Do you want to help building the next generation data center automation?
+			<a href="http://www.immobilienscout24.de" target="_blank">ImmobilienScout24</a> 
+			is looking for engineers who like to automate everything.
+			Check our <a href="http://developer.immobilienscout24.de/engineering/jobs-kein-kalter-kaffee/" target="_blank">developer blog</a>
+			for further information.
+		</p>
 	</div>
-
 </div>
 
