@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-    <head>
+<head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -8,45 +8,55 @@
         <meta name="description" content="YADT is a next generation data center deployment and system management tool.">
         <meta name="viewport" content="width=device-width">
         <link href="http://fonts.googleapis.com/css?family=Asap" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="/css/main.css">
-        <script src="/js/vendor/modernizr-2.6.1.min.js"></script>
-    </head>
-    <body>
-        <header>
-            <a class="banner" href="/">
-                YADT an Augmented Deployment Tool
-            </a>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<div class="container">
+		<div class="masthead">
+			<ul class="nav nav-pills pull-right">
+				<li><a href="/blog/">Blog</a></li>
+				<li><a href="/events/">Events</a></li>
+				<li><a href="https://github.com/yadt/yadt.github.com/wiki" target="_blank">Wiki</a></li>
+				<li><a href="https://github.com/yadt" target="_blank">Source</a><li>
+			</ul>
+			<h2 class="muted"><img class="top-icon" src="/images/yadt-logo-32.jpg"><a href="/">yadt</a></h2>
+		</div>
 
-            <nav>
-                <a href="/blog/">Blog</a>
-                <a href="/events/">Events</a>
-                <a href="https://github.com/yadt/yadt.github.com/wiki" target="_blank">Wiki</a>
-                <a href="https://github.com/yadt" target="_blank">GitHub</a>
-                <a href="http://www.youtube.com/user/yadtproject/featured" target="_blank">YouTube Channel</a>
-            </nav>
-        </header>
+		<hr>
 
-        <div id="main">
-            {% if page.date %}
-            <span class="post-date float-right">
-                {{ page.date | date_to_string }}
-            </span>
-            {% endif %}
+		<h1 class="marketing">{{ page.title }}</h1>
 
-            <h1>{{ page.title }}</h1>
-            {{ content }}
+		{% if page.date %}
+		<span class="pull-right">
+			{{ page.date | date_to_string }}
+		</span>
+		{% endif %}
 
-	    <hr>
-	    <a href="https://www.twitter.com/YadtProject" target="_blank"><img src="images/twitter-icon.png"></a>
-	    <a href="https://www.yadt-project.com/rss.xml"><img src="images/rss-icon.png"></a>
-        </div>
+		{{ content }}
 
-        <footer>
-            YADT an Augmented Deployment Tool<br>
-            Copyright (C) 2010-2013 <a href="http://www.immobilienscout24.de/de/ueberuns/impressum.jsp">Immobilien Scout GmbH</a><br>
-            Licensed under GNU GPL v3<br>
-            <br>
-            <small>{{ site.time }}</small>
-        </footer>
-    </body>
+		<hr>
+
+		<div class="footer">
+			<div class="pull-right">
+				<!-- icons from http://www.designkindle.com/2011/10/27/socialis/ created by http://veodesign.com -->
+				<a href="https://www.twitter.com/YadtProject" target="_blank"><img src="/images/Twitter.png"></a>
+				<a href="http://www.youtube.com/user/yadtproject/featured" target="_blank"><img src="/images/Youtube.png"></a>
+				<a href="/rss.xml"><img src="/images/RSS.png"></a>
+			</div>
+		<div class="pull-left muted">
+			<p>
+				YADT an Augmented Deployment Tool <br>
+				Copyright (C) 2010-2013 
+				<a href="http://www.immobilienscout24.de/de/ueberuns/impressum.jsp">Immobilien Scout GmbH</a>
+				<br>
+
+				Licensed under GNU GPL v3<br>
+				<br>
+				<small>{{ site.time }}</small>
+			</p>
+		</div>
+	</div>
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+</body>
 </html>
