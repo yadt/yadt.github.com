@@ -13,13 +13,17 @@ body {
 }
 
 .jumbotron {
+	background-image: url('/images/yadt-background.jpg');
+	color: white;
 	margin: 60px 0;
 	text-align: center;
+	height: 380px;
+	padding-top: 10px;
 }
 
 .jumbotron h2 {
 	font-size: 72px;
-	line-height: 1;
+	line-height: 2;
 }
 
 .jumbotron .btn {
