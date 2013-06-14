@@ -15,9 +15,25 @@ title: YADT - an Augmented Deployment Tool
 
 <div class="row-fluid marketing">
 	<div class="span6">
+		<h3>Introduction to YADT</h3>
+		<p>
+			<iframe width="560" height="315" src="http://www.youtube.com/embed/pfhhGo_KSe4" frameborder="0" allowfullscreen></iframe>
+		</p>
+	</div>
+
+	<div class="span6">
+		<h3>See YADT in action</h3>
+		<p>
+			<iframe width="560" height="315" src="http://www.youtube.com/embed/rFgIfnrvdPw" frameborder="0" allowfullscreen></iframe>
+		</p>
+	</div>
+</div>
+
+<div class="row-fluid marketing">
+	<div class="span6">
 		<h3>YADT is human-readable</h3>
 		<p>
-			YADT lets you model your data center landscape in a simple, human readable yaml format. The packaging 
+			YADT lets you model your data center landscape in a simple, human readable yaml format. The packaging
 			of software and its configuration, the definition of package dependencies, the definition of service
 			dependencies, and some basic conventions are the YADT model. With these information, YADT can deploy
 			any changes to your software and your configuration to any number of hosts. Of course YADT will also
@@ -31,13 +47,13 @@ title: YADT - an Augmented Deployment Tool
 		<p>
 			YADT assures that the updates and service restarts are done in the correct order over your
 			complete data center. YADT does this by analyzing the service and package dependencies, grouping
-			dependent services and hosts together into "chunks". It then rolls out the update as a sequential 
-			wave over all chunks, thus assuring that your platform as a whole stays available during this 
+			dependent services and hosts together into "chunks". It then rolls out the update as a sequential
+			wave over all chunks, thus assuring that your platform as a whole stays available during this
 			process.
 		</p>
 		<p>
 			YADT also provides a way to collaboratively administer a large number of hosts concurrently by many
-			users. It provides an audit trail of who did what, when, and on which host.            
+			users. It provides an audit trail of who did what, when, and on which host.
 		</p>
 	</div>
 </div>
@@ -60,12 +76,12 @@ title: YADT - an Augmented Deployment Tool
 		<p>{{ post.date | date_to_string }}</p>
 		{% endfor %}
         </div>
-      
+
 	<div class="span4">
 		<h3>Jobs</h3>
 		<p>
 			Do you like Open Source? Do you want to help building the next generation data center automation?
-			<a href="http://www.immobilienscout24.de" target="_blank">ImmobilienScout24</a> 
+			<a href="http://www.immobilienscout24.de" target="_blank">ImmobilienScout24</a>
 			is looking for engineers who like to automate everything.
 			Check our <a href="http://developer.immobilienscout24.de/engineering/jobs-kein-kalter-kaffee/" target="_blank">developer blog</a>
 			for further information.
