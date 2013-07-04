@@ -20,11 +20,11 @@ that allows retrieving information or sending commands via an <em>Unix Domain So
 
 Information from nagios itself comes from a file named <em>status.dat</em> which
 is updated every <code>x</code> seconds (where <code>x</code> can be configured
-but usually has a value of 5-10). Thus having real-time information from
-livestatus is very useful.<br/>
+but usually has a value of 5-10). <br/>
 As the name <strong>live</strong>status hints, the information retrieved and sent using
 livestatus is always up-to-date. Livestatus does this by directly retrieving the in-memory
 information using the broker API.
+Thus having real-time information from livestatus is very useful.
 
 <h3>The problems</h3>
 <h4><em>Unix Domain Socket</em> means you need local access</h4>
