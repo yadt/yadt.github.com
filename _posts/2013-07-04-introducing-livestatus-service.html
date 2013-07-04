@@ -37,7 +37,7 @@ have another issue in common!
 
 <h4>You have to deal with the output format from MK-livestatus</h4>
 <p>
-The output format from MK-livestatus is not very pleasant to work with.
+The output format from MK-livestatus is not very pleasant to work with (due to performance concerns).
 For example if you ask for JSON, you'll get something like</br>
 <code>[['field1', 'field2', 'field3'],</br>
        ['value1', 'value2', 'value3']]</code></br>
@@ -47,7 +47,7 @@ If you restrict the displayed columns like so :</br>
 <code>Columns: field_1 field_2</code></br>
 you'd just get</br>
 <code>[['value1', 'value2']]</code></br>
-so get ready to parse your own query.</br></br>
+so get ready to parse your own query (or add a Column-Headers section to it).</br></br>
 <strong>Awesome, right?</strong>
 </p>
 
