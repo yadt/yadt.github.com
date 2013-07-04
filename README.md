@@ -4,9 +4,9 @@
 
 
 **Install [jekyll](https://github.com/mojombo/jekyll)**
-
+On Ubuntu :
 ```bash
-sudo gem install jekyll
+sudo apt-get install jekyll
 ```
 
 [How to install jekyll](https://github.com/mojombo/jekyll/wiki/install)
