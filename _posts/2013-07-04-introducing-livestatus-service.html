@@ -1,0 +1,66 @@
+---
+layout: default
+title: Introducing livestatus-service
+categories: blog
+---
+
+<h2>Automate!</h2>
+<p>
+When trying to <em>automate everything</em> sometimes the tools you use can hold
+you back. An example is monitoring, where old systems (like nagios) are difficult
+to automate because they have no remote control API.
+</p>
+
+<h2>Using MK-livestatus</h2>
+<p>
+MK-livestatus is an extension for Nagios/Icinga (and built-in for Shinken)
+that allows retrieving information or sending commands via an <em>Unix Domain Socket (UDS)</em>.
+</p>
+<h3>Livestatus is cool</h3>
+
+Information from nagios itself comes from a file named <em>status.dat</em> which
+is updated every <code>x</code> seconds (where <code>x</code> can be configured
+but usually has a value of 5-10). Thus having real-time information from
+livestatus is very useful.<br/>
+As the name <strong>live</strong>status hints, the information retrieved and sent using
+livestatus is always up-to-date. Livestatus does this by directly retrieving the in-memory
+information using the broker API.
+
+<h3>The problems</h3>
+<h4><em>Unix Domain Socket</em> means you need local access</h4>
+<p>
+The MK-livestatus page suggests either using SSH or <em>xinetd</em>
+to expose the socket to the network.
+While exposing the socket over TCP is a security nightmare, both suggestions
+have another issue in common!
+</p>
+
+<h4>You have to deal with the output format from MK-livestatus</h4>
+<p>
+The output format from MK-livestatus is not very pleasant to work with.
+For example if you ask for JSON, you'll get something like</br>
+<code>[['field1', 'field2', 'field3'],</br>
+       ['value1', 'value2', 'value3']]</code></br>
+Basically the first list is the list of column names, and then you get a list
+with the values for every row.
+If you restrict the displayed columns like so :</br>
+<code>Columns: field_1 field_2</code></br>
+you'd just get</br>
+<code>[['value1', 'value2']]</code></br>
+so get ready to parse your own query.</br></br>
+<strong>Awesome, right?</strong>
+</p>
+
+<h2>Introducing livestatus-service</h2>
+<h3>What it does for you</h3>
+<p>
+Wouldn't it be nice to access the livestatus API over HTTP (being able to build in
+authentication and so on) and at the same time get cool responses like:</br>
+<code>[{'field1': 'value1', 'field2': 'value2', 'field3': 'value3'}]</code>?</br>
+With livestatus-service, this is possible. You can even select an index (say <em>field1</em>)
+and get something like</br>
+<code>{'value1' : {'field1': 'value1', 'field2': 'value2', 'field3': 'value3'}}</code></br>
+<h3>Getting livestatus-service</h3>
+The code is released under the MIT license <a href="https://github.com/ImmobilienScout24/livestatus_service">on GitHub</a>.
+You can build it from there, or just use <a href="https://pypi.python.org/pypi/livestatus-service">the PyPI package</a>.<br/>
+Refer to <a href="https://github.com/ImmobilienScout24/livestatus_service/blob/master/README.md">the documentation on GitHub</a> for more information.
