@@ -1,0 +1,93 @@
+---
+layout: default
+title: Mockito does only half the job
+categories: blog
+---
+<br />
+When it comes to unit testing infrastructure code, mocking is sometimes difficult
+to avoid. In the python programming language, there are many powerful mocking
+libraries.
+<ul>
+<li><a href="https://code.google.com/p/mockito-python/">Mockito</a></li>
+<li><a href="http://www.voidspace.org.uk/python/mock/">Mock</a></li>
+</ul>
+ are the ones we have been using so far.
+
+<h3>Mockito is the most expressive</h3>
+Mockito allows mocking in a fluent interface-ish fashion.
+This makes writing tests a breeze :
+<pre>
+    <code>
+when(dog).bark().thenReturn('meow')
+
+self.assertRaises(DogsDoNotMeowException, veterinarian.inspect, dog)
+verify(dog).bark()
+    </code>
+</pre>
+
+As a contrast, the Mock framework emphasizes monkey-patching, e.G.
+<pre>
+    <code>
+dog = Mock()
+dog.bark.return_value = 'meow'
+
+self.assertRaises(DogsDoNotMeowException, veterinarian.inspect, dog)
+dog.bark.assert_called_with()
+    </code>
+</pre>
+which is definitely straightforward but not as nice to read as the above.
+
+<h3>Readability is most important in failing tests</h3>
+Passing tests are great, because it gives you confidence that your changes did
+not break functionality. But when they fail, you want to understand quickly what
+went wrong. Mockito is clearly a winner when it comes to reading the test sources,
+but what about error messages?
+
+<h3>When an expected call is missing</h3>
+The interesting part is when you stub and verify calls with parameters.
+What if a parameter is wrong or missing?
+<h4>With Mockito</h4>
+<pre>
+    <code>
+when(terminal).render(any()).thenReturn(None)
+
+terminal.render('fooo')
+
+verify(terminal).render('foo')
+    </code>
+</pre>
+Guess what the error message is? (Hint: it's not useful)
+<pre>
+    <code>
+Wanted but not invoked: render('foo')
+    </code>
+</pre>
+Yup. That's it.<br/>
+<h4>With Mock</h4>
+<pre>
+    <code>
+terminal.render = Mock()
+
+terminal.render('fooo')
+
+terminal.render.assert_called_with('foo')
+    </code>
+</pre>
+The error message is
+<pre>
+    <code>
+AssertionError: Expected call: render('foo')
+Actual call: render('fooo')
+    </code>
+</pre>
+Mock has several other advantages over Mockito (like being able to mock open() statements
+very easily). <br/>
+I'd gladly dismiss all these features in favor of the fluent interface
+style patching, but the incomplete error messages are a showstopper.
+If your test fails to deliver expressive messages when they are needed the most,
+then the test is probably more of a liability than a boon.
+
+<h3>TLDR</h3>
+I use Michael Foord's Mock and so should you.
+<hr />
+by {% include maximilienriehl.html %}
