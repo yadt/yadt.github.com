@@ -9,7 +9,7 @@ categories: blog
 Measuring is an important asset to continuous improvement, both for yourself and for your team.
 There are many ways to measure personal development.
 The traditional agile approach to this would be collecting feedback and conducting a private
-discussion with your team leader about your carreer path.
+discussion with your team leader about your career path.
 This also counteracts the fact that many people tend to have difficulties giving and accepting feedback in person.
 
 One frequently used method for collecting feedback and input would be
@@ -60,7 +60,7 @@ and trying to be objective (you're trying to lead an open discussion here, not a
 In hindsight, team development is not only a matter between you and your team
 leader, it can also be very helpful to give and receive feedback from your team
 colleagues to get a better understanding of your role in the team,
-carreer path and personal development.
+career path and personal development.
 
 <div class="well well-large">
     by {% include maximilienriehl.html %} and {% include marcelwolf.html %}
