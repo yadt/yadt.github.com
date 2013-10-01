@@ -62,6 +62,7 @@ leader, it can also be very helpful to give and receive feedback from your team
 colleagues to get a better understanding of your role in the team,
 career path and personal development.
 
+
 <div class="well well-large">
     by {% include maximilienriehl.html %} and {% include marcelwolf.html %}
 </div>
