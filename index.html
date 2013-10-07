@@ -2,8 +2,7 @@
 layout: default
 title: YADT - an Augmented Deployment Tool
 ---
-<a href="https://github.com/yadt"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
-<div class="hero-unit yadt-hero">
+<div class="jumbotron yadt-hero">
 	<h2>One Tool to Rule Them All</h2>
 	<p class="lead">
 		YADT is a next generation data center deployment and system management tool.
@@ -14,15 +13,15 @@ title: YADT - an Augmented Deployment Tool
 	<a class="btn btn-large btn-primary" href="https://github.com/yadt/try-it-yourself">Try it yourself.</a>
 </div>
 
-<div class="row-fluid marketing">
-	<div class="span6">
+<div class="row marketing">
+	<div class="col-lg-6">
 		<h3>Introduction to YADT</h3>
 		<p>
 			<iframe width="560" height="315" src="http://www.youtube.com/embed/pfhhGo_KSe4" frameborder="0" allowfullscreen></iframe>
 		</p>
 	</div>
 
-	<div class="span6">
+	<div class="col-lg-6">
 		<h3>See YADT in action</h3>
 		<p>
 			<iframe width="560" height="315" src="http://www.youtube.com/embed/rFgIfnrvdPw" frameborder="0" allowfullscreen></iframe>
@@ -30,8 +29,8 @@ title: YADT - an Augmented Deployment Tool
 	</div>
 </div>
 
-<div class="row-fluid marketing">
-	<div class="span6">
+<div class="row marketing">
+	<div class="col-lg-6">
 		<h3>YADT is human-readable</h3>
 		<p>
 			YADT lets you model your data center landscape in a simple, human readable yaml format. The packaging
@@ -43,7 +42,7 @@ title: YADT - an Augmented Deployment Tool
 		</p>
 	</div>
 
-	<div class="span6">
+	<div class="col-lg-6">
 		<h3>YADT understands your data center</h3>
 		<p>
 			YADT assures that the updates and service restarts are done in the correct order over your
@@ -61,32 +60,36 @@ title: YADT - an Augmented Deployment Tool
 
 <hr>
 
-<div class="row-fluid marketing">
-        <div class="span4">
+<div class="row marketing">
+	<div class="col-lg-4">
 		<h3>Blog</h3>
 		{% for post in site.categories.blog limit:3 %}
-		<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+		<h4>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+		</h4>
 		<p>{{ post.date | date_to_string }}</p>
 		{% endfor %}
-        </div>
+	</div>
 
-        <div class="span4">
+	<div class="col-lg-4">
 		<h3>Events</h3>
 		{% for post in site.categories.events limit:3 %}
-		<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+		<h4>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+		</h4>
 		<p>{{ post.date | date_to_string }}</p>
 		{% endfor %}
-        </div>
+	</div>
 
-	<div class="span4">
+	<div class="col-lg-4">
 		<h3>Jobs</h3>
 		<p>
 			Do you like Open Source? Do you want to help building the next generation data center automation?
 			<a href="http://www.immobilienscout24.de" target="_blank">ImmobilienScout24</a>
 			is looking for engineers who like to automate everything.
-			Check our <a href="http://developer.immobilienscout24.de/engineering/jobs-kein-kalter-kaffee/" target="_blank">developer blog</a>
+			Check our
+			<a href="http://developer.immobilienscout24.de/engineering/jobs-kein-kalter-kaffee/" target="_blank">developer blog</a>
 			for further information.
 		</p>
 	</div>
 </div>
-

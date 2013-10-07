@@ -8,6 +8,25 @@ body {
 	max-width: 700px;
 }
 
+.row + .row {
+    margin-top: 15px;
+}
+
+.table th, .table td {
+     border-top: none !important;
+ }
+
+.btn-primary{
+    background-color: #006dcc;
+}
+
+.navbar-default {
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
 .container-narrow > hr {
 	margin: 30px 0;
 }
