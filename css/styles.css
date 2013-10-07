@@ -8,8 +8,16 @@ body {
 	max-width: 700px;
 }
 
+/*
+Add spacing when row sections follow each other (e.G. blog / event lists)
+*/
 .row + .row {
     margin-top: 15px;
+}
+
+.wrapping-table {
+    table-layout: fixed;
+    word-wrap: break-word;
 }
 
 .table th, .table td {
