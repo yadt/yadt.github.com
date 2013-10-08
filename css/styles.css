@@ -15,11 +15,6 @@ Add spacing when row sections follow each other (e.G. blog / event lists)
     margin-top: 15px;
 }
 
-.wrapping-table {
-    table-layout: fixed;
-    word-wrap: break-word;
-}
-
 .table th, .table td {
      border-top: none !important;
  }
