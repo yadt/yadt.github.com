@@ -11,86 +11,86 @@
 	<link rel="stylesheet" href="/css/styles.css">
 	<link rel="alternate" type="application/rss+xml" title="YADT news feed" href="http://www.yadt-project.org/rss.xml"></head>
 <body>
-	<div class="container">
 
-		<nav class="navbar navbar-default" role="navigation">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">
-					{% if page.title == 'YADT - an Augmented Deployment Tool' %}
-					<h3 class="muted">
-						<img class="top-icon" src="/images/yadt-logo-32.jpg" alt="yadt">
-						<a href="/">YADT - an Augmented Deployment Tool</a>
-					</h3>
-					{% else %}
-					<h4 class="muted">
-						<img class="top-icon" src="/images/yadt-logo-32.jpg" alt="yadt">
-						<a href="/">YADT - an Augmented Deployment Tool</a>
-					</h4>
-					{% endif %}
-				</a>
+	<nav class="navbar navbar-default" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">
+				{% if page.title == 'YADT - an Augmented Deployment Tool' %}
+				<h3 class="muted">
+					<img class="top-icon" src="/images/yadt-logo-32.jpg" alt="yadt">
+					<a href="/">YADT - an Augmented Deployment Tool</a>
+				</h3>
+				{% else %}
+				<h4 class="muted">
+					<img class="top-icon" src="/images/yadt-logo-32.jpg" alt="yadt">
+					<a href="/">YADT - an Augmented Deployment Tool</a>
+				</h4>
+				{% endif %}
+			</a>
+		</div>
+
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="/blog/">Blog</a>
+				</li>
+				<li>
+					<a href="/events/">Events</a>
+				</li>
+				<li>
+					<a href="/cheatsheet-0.2.pdf">Cheat Sheet</a>
+				</li>
+				<li>
+					<a href="https://github.com/yadt/yadt.github.com/wiki" target="_blank">Wiki</a>
+				</li>
+				<li>
+					<a href="https://github.com/yadt" target="_blank">Source</a>
+					<li></li>
+				</ul>
 			</div>
+			<!-- /.navbar-collapse -->
+		</nav>
 
-			<div class="collapse navbar-collapse navbar-ex1-collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<a href="/blog/">Blog</a>
-					</li>
-					<li>
-						<a href="/events/">Events</a>
-					</li>
-					<li>
-						<a href="/cheatsheet-0.2.pdf">Cheat Sheet</a>
-					</li>
-					<li>
-						<a href="https://github.com/yadt/yadt.github.com/wiki" target="_blank">Wiki</a>
-					</li>
-					<li>
-						<a href="https://github.com/yadt" target="_blank">Source</a>
-						<li></li>
-					</ul>
-				</div>
-				<!-- /.navbar-collapse -->
-			</nav>
-
-		{% if page.date %}
-					<span class="pull-right">{{ page.date | date_to_string }}</span>
-					{% endif %}
+		<div class="container">
+			{% if page.date %}
+			<span class="pull-right">{{ page.date | date_to_string }}</span>
+			{% endif %}
 
 		{{ content }}
-					<hr>
+			<hr>
 
-					<div class="footer">
-						<div class="pull-right">
-							<!-- icons from http://www.designkindle.com/2011/10/27/socialis/ created by http://veodesign.com -->
-							<a href="https://www.twitter.com/YadtProject" target="_blank">
-								<img src="/images/Twitter.png" alt="Twitter/YadtProject"></a>
-							<a href="http://www.youtube.com/user/yadtproject/featured" target="_blank">
-								<img src="/images/Youtube.png" alt="youtube/yadt"></a>
-							<a href="/rss.xml">
-								<img src="/images/RSS.png" alt="yadt RSS feed"></a>
-						</div>
-					</div>
-
-					<div class="pull-left text-muted">
-						<p>
-							YADT an Augmented Deployment Tool
-							<br>
-							Copyright (C) 2010-2013
-							<a href="http://www.immobilienscout24.de/de/ueberuns/impressum.jsp">Immobilien Scout GmbH</a>
-							<br>
-							Licensed under GNU GPL v3
-							<br>
-							<br>
-							<small>{{ site.time }}</small>
-						</p>
-					</div>
+			<div class="footer">
+				<div class="pull-right">
+					<!-- icons from http://www.designkindle.com/2011/10/27/socialis/ created by http://veodesign.com -->
+					<a href="https://www.twitter.com/YadtProject" target="_blank">
+						<img src="/images/Twitter.png" alt="Twitter/YadtProject"></a>
+					<a href="http://www.youtube.com/user/yadtproject/featured" target="_blank">
+						<img src="/images/Youtube.png" alt="youtube/yadt"></a>
+					<a href="/rss.xml">
+						<img src="/images/RSS.png" alt="yadt RSS feed"></a>
 				</div>
+			</div>
+
+			<div class="pull-left text-muted">
+				<p>
+					YADT an Augmented Deployment Tool
+					<br>
+					Copyright (C) 2010-2013
+					<a href="http://www.immobilienscout24.de/de/ueberuns/impressum.jsp">Immobilien Scout GmbH</a>
+					<br>
+					Licensed under GNU GPL v3
+					<br>
+					<br>
+					<small>{{ site.time }}</small>
+				</p>
+			</div>
+		</div>
 </body>
-			</html>
+	</html>
