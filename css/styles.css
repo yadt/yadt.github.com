@@ -59,6 +59,11 @@ Add spacing when row sections follow each other (e.G. blog / event lists)
 	padding-right: 10px;
 }
 
+.thumbnail{
+    outline: none;
+    border: 0px solid;
+}
+
 /* CSS for responsive video embeds */
 .flex-video {
 position: relative;

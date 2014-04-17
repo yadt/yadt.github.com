@@ -13,62 +13,116 @@ title: YADT - an Augmented Deployment Tool
 	<a class="btn btn-large btn-primary" href="https://github.com/yadt/try-it-yourself">Try it yourself.</a>
 </div>
 
+<div class="row">
+	<p>
+		<h2>
+			<center>What can YADT do?</center>
+		</h2>
+	</p>
+</div>
+
 <div class="row marketing">
-	<div class="col-lg-6">
-		<div class="thumbnail">
-			<div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
-				<iframe allowfullscreen="" src="http://www.youtube.com/embed/pfhhGo_KSe4" frameborder="0"></iframe>
-			</div>
-			<div class="caption">
-				<h3>Introduction to YADT</h3>
-			</div>
+	<div class="col-md-4">
+		<p>
+			<h3>Automatic service dependencies.</h3>
+			Dependencies between services are based on package dependencies.
+				If your <em>webapp</em>
+			package requires a <em>tomcat</em>
+			package, that's all that YADT needs to know.
+		</p>
+	</div>
+	<div class="col-md-4">
+		<p>
+			<h3>Reboot your servers.</h3>
+			YADT knows when your server needs to reboot. Lean back and watch while a single command brings all
+	your servers up to date in every way.
+		</p>
+	</div>
+
+	<div class="col-md-4">
+		<p>
+			<h3>Service abstraction that works.</h3>
+			Whether you use virtualized machines, lxc containers or real hardware, your machines are a set of services with dependencies.
+	Using a loadbalancer, have monitoring? That's a service too.
+	See everything with one glance.
+		</p>
+	</div>
+</div>
+
+<div class="row marketing videos">
+	<div class="col-md-4">
+		<div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
+			<iframe allowfullscreen="" src="https://www.youtube.com/embed/uBKZ5lh27yc" frameborder="0"></iframe>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
+			<iframe allowfullscreen="" src="http://www.youtube.com/embed/pmjFhFfLucE" frameborder="0"></iframe>
 		</div>
 	</div>
 
-	<div class="col-lg-6">
-		<div class="thumbnail">
-			<div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
-				<iframe allowfullscreen="" src="http://www.youtube.com/embed/rFgIfnrvdPw" frameborder="0"></iframe>
-			</div>
-			<div class="caption">
-				<h3>See YADT in action</h3>
-			</div>
+	<div class="col-md-4">
+		<div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
+			<iframe allowfullscreen="" src="http://www.youtube.com/embed/ZmHpQoK6ESI" frameborder="0"></iframe>
 		</div>
 	</div>
 </div>
 
 <div class="row marketing">
-	<div class="col-lg-6">
-		<h3>YADT is human-readable</h3>
+	<div class="col-md-4">
 		<p>
-			YADT lets you model your data center landscape in a simple, human readable yaml format. The packaging
-			of software and its configuration, the definition of package dependencies, the definition of service
-			dependencies, and some basic conventions are the YADT model. With these information, YADT can deploy
-			any changes to your software and your configuration to any number of hosts. Of course YADT will also
-			deploy all updates to your OS, you can even separate these OS updates from your application and
-			configuration updates.
+			<h3>You're in control.</h3>
+			Running a command always has the same target outcome with <strong>zero</strong>
+			undefined states inbetween. So even if a command fails, you have an
+	ace up your sleeve and can simply restart it.
 		</p>
 	</div>
 
-	<div class="col-lg-6">
-		<h3>YADT understands your data center</h3>
+	<div class="col-md-4">
 		<p>
-			YADT assures that the updates and service restarts are done in the correct order over your
-			complete data center. YADT does this by analyzing the service and package dependencies, grouping
-			dependent services and hosts together into "chunks". It then rolls out the update as a sequential
-			wave over all chunks, thus assuring that your platform as a whole stays available during this
-			process.
+			<h3>For people and machines alike.</h3>
+			Can be run by humans (interactive shell) or in an automated fashion
+	(e.G. jenkins). A component (broadcaster) can expose customizable
+	views of what is going on to your whole department.
 		</p>
+	</div>
+
+	<div class="col-md-4">
 		<p>
-			YADT also provides a way to collaboratively administer a large number of hosts concurrently by many
-			users. It provides an audit trail of who did what, when, and on which host.
+			<h3>Virtually no overhead.</h3>
+			No long-running processes or database foo.
+			<br/>
+			You like to
+			<em>KISS</em>
+			?
+			So do we.
 		</p>
+	</div>
+</div>
+
+<div class="row marketing">
+	<div class="thumbnail">
+		<div class="caption">
+			<p>
+				<center>
+					<h3>YADT in an animated video</h3>
+				</center>
+			</p>
+		</div>
+		<div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
+			<iframe allowfullscreen="" src="http://www.youtube.com/embed/pfhhGo_KSe4" frameborder="0"></iframe>
+		</div>
 	</div>
 </div>
 
 <hr>
 
 <div class="row marketing">
+	<p>
+		<center>
+			<h1>News</h1>
+		</center>
+	</p>
 	<div class="col-lg-4">
 		<h3>Blog</h3>
 		{% for post in site.categories.blog limit:3 %}
